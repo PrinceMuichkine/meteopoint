@@ -8,10 +8,22 @@ A simple CLI tool for weather and environmental data, featuring air quality moni
 # Install globally
 pip install meteopoint
 
-# Set your OpenWeather API key
-export OPENWEATHER_API_KEY=your_api_key_here
-export GOOGLE_MAPS_API_KEY=your_api_key_here
-export GOOGLE_MAPS_SIGNING_SECRET=your_signing_secret_here
+# Set your API keys in your shell configuration (for zsh)
+echo '# MeteoPoint API Keys
+export OPENWEATHER_API_KEY="your_openweather_api_key"
+export GOOGLE_MAPS_API_KEY="your_google_maps_api_key"
+export GOOGLE_MAPS_SIGNING_SECRET="your_google_maps_signing_secret"' >> ~/.zshrc
+
+# For bash users, use ~/.bashrc instead:
+echo '# MeteoPoint API Keys
+export OPENWEATHER_API_KEY="your_openweather_api_key"
+export GOOGLE_MAPS_API_KEY="your_google_maps_api_key"
+export GOOGLE_MAPS_SIGNING_SECRET="your_google_maps_signing_secret"' >> ~/.bashrc
+
+# Reload your shell configuration
+source ~/.zshrc  # or source ~/.bashrc for bash users
+
+Replace `your_openweather_api_key`, `your_google_maps_api_key`, and `your_google_maps_signing_secret` with your actual API keys.
 
 # Start using it!
 meteopoint paris
